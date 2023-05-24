@@ -1,4 +1,7 @@
 import * as THREE from 'three';
+
+// 导入轨道控制器
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 // 初始化场景
 const scene = new THREE.Scene();
 
@@ -34,4 +37,20 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
 // 使用渲染器 通过相机将场景渲染进来
-renderer.render(scene, camera);
+// renderer.render(scene, camera);
+
+// 创建轨道控制器
+const controls = new OrbitControls(camera, renderer.domElement);
+
+// 添加坐标轴辅助器
+const axesHelper = new THREE.AxesHelper(5);
+scene.add(axesHelper);
+
+const render = () => {
+  renderer.render(scene, camera);
+
+  // 渲染一下帧的时候就会调用render函数
+  requestAnimationFrame(render);
+};
+
+render();
