@@ -36850,8 +36850,40 @@ if (typeof window !== 'undefined') {
 var THREE = _interopRequireWildcard(require("three"));
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-console.log(THREE);
-},{"three":"../node_modules/three/build/three.module.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+console.log(123);
+// 初始化场景
+var scene = new THREE.Scene();
+
+// 初始化相机
+var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+
+// // 设置相机的位置
+camera.position.set(0, 0, 10);
+scene.add(camera);
+
+// // 添加物体
+// 创建几何体
+var cubeGeometry = THREE.BoxGeometry();
+// console.log(THREE.BoxGeometry);
+// // 设置材质
+// const cubeMaterial = THREE.MeshBasicMaterial({ color: '0xffff00' });
+// // 根据几何体和材质去创建物体
+// const cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
+// // 将几何体添加到场景中
+// scene.add(cube);
+
+// // 初始化渲染器
+// const renderer = new THREE.WebGLRenderer();
+
+// // 设置渲染的尺寸代销
+// renderer.setSize(window.innerWidth, window.innerHeight);
+
+// // 将webgl渲染的canvas内容添加到body
+// document.body.appendChild(renderer.domElement);
+
+// // 使用渲染器 通过相机将场景渲染进来
+// renderer.render(scene, camera);
+},{"three":"../node_modules/three/build/three.module.js"}],"../node_modules/.pnpm/parcel-bundler@1.12.5/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -36876,7 +36908,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57759" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60798" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
@@ -37020,5 +37052,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","main/main.js"], null)
+},{}]},{},["../node_modules/.pnpm/parcel-bundler@1.12.5/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","main/main.js"], null)
 //# sourceMappingURL=/main.0632549a.js.map

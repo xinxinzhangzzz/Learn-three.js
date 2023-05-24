@@ -1,0 +1,1 @@
+{"mappings":"AAAA;;;;;AAKA","sources":["src/styles/index.css"],"sourcesContent":["* {\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  background-color: skyblue;\n}\n"],"names":[],"version":3,"file":"index.ebeadb08.css.map","sourceRoot":"/__parcel_source_root/"}
